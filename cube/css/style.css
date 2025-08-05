@@ -1,136 +1,154 @@
-*{
-	font-family: 'Audiowide';
-}
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 html, body {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(135deg, #8e0e00, #1f1c18); /* F1 red-black gradient */
+  background-size: 200% 200%;
+  animation: redPulse 20s ease infinite;
+  vertical-align: top;
+  overflow: hidden;
+  color: #fff;
+  letter-spacing: 1px;
 }
 
-body {
-	background: -webkit-radial-gradient(center, ellipse cover,  #444 0%,#000000 90%); /* Chrome10+,Safari5.1+ */
-	vertical-align: top;
-	overflow: hidden;
+@keyframes redPulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
+/* Container for canvas or cube */
 #container {
-	width: 80%;
-	height: 80%;
+  width: 80%;
+  height: 80%;
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
-/* ------------------- typewritting terminal ------------------- */
+/* Header Title */
+h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 20px;
+}
 
+/* Terminal Style (Typewriting Look) */
 .type {
-	width: 80%;
-	height: 40px;
-	border-radius: 10px;
-	border: 2px solid #ffffff;
-	margin: auto;
+  width: 80%;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
 }
 
 .type #terminal {
   padding: 0 10px;
   line-height: 40px;
-	font-size: 16px;
-	color: #ffffff;
-	letter-spacing: 2px;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 2px;
 }
 
 .type #terminal::before {
-	content: ">";
-	margin-right: 10px;
+  content: ">";
+  margin-right: 10px;
 }
 
-/* ------------------- solve buttons ------------------- */
-
+/* Solve Button Section */
 .solve {
   position: absolute;
   left: 80px;
   top: 50%;
-  margin-top: -135px;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
 }
 
 .solve button {
-	width: 200px;
-	margin-bottom: 15px;
+  width: 200px;
+  margin-bottom: 15px;
 }
 
-/* ------------------- twist buttons ------------------- */
+/* Twist Button Section */
 .twist {
   position: absolute;
   top: 50%;
   right: 50px;
-  margin-top: -240px;
-	width: 190px;
+  transform: translateY(-50%);
+  width: 190px;
 }
 
 .twist h1 {
-	margin: 0 auto 15px;
+  margin: 0 auto 15px;
   text-align: center;
-	color: #ffffff;
-	font-size: 20px;
+  font-size: 20px;
+  color: #ffffff;
 }
 
-.twist button {
-  margin-bottom: 10px;
-  margin-right: 10px;
-}
-
-/* ------------------- buttons ------------------- */
-
+/* Buttons - Hover Swipe Effect */
 button {
-	width:  80px;
-	height: 40px;
-  color: #fff;
-	border-radius: 10px;
-	border: 2px solid;
-  border-color: #fff;
-	font-size: 16px;
-	background: none;
-	outline: none;
-	cursor: pointer;
-	-webkit-transition: all .5s;
-	transition: all .5s;
-	overflow: hidden;
-	position: relative;
+  width: 80px;
+  height: 40px;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
 }
 
-button:before, button:after {
-	content: "";
-	position: absolute;
-	z-index: -1;
-	height: 100%;
-	width: 0;
-	top: 0;
-	background-color: #ffffff;
-	-webkit-transition: all .4s;
-	transition: all .4s;
+button:before,
+button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 0;
+  top: 0;
+  background-color: #ffffff;
+  transition: all 0.4s ease;
+  transform: skew(-45deg, 0);
 }
 
 button:before {
-	left: -15px;
-	-webkit-transform: skew(-45deg, 0);
-	transform: skew(-45deg, 0);
+  left: -15px;
 }
 
 button:after {
-	right: -15px;
-	-webkit-transform: skew(-45deg, 0);
-	transform: skew(-45deg, 0);
+  right: -15px;
 }
 
 button:hover {
-	color: #27323A;
+  color: #8e0e00;
+  background-color: #ffffff;
 }
 
-button:hover:before, button:hover:after {
-	width: 80%;
+button:hover:before,
+button:hover:after {
+  width: 80%;
 }
