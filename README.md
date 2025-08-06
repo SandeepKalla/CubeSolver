@@ -9,6 +9,8 @@ CubeSolver is designed to analyze a given 3x3 Rubik's cube state and generate st
 ## Features
 
 - **3x3 Rubik's Cube Solving**: Core functionality for solving standard 3x3 Rubik's cubes
+- **Interactive Web Interface**: User-friendly HTML/CSS/JavaScript implementation
+- **Real-time Visualization**: Visual cube representation and manipulation
 - **Algorithm Implementation**: Utilizes established cube-solving methods
 - **Move Generation**: Provides step-by-step solution sequences
 - **Cube State Analysis**: Processes current cube configurations
@@ -17,7 +19,7 @@ CubeSolver is designed to analyze a given 3x3 Rubik's cube state and generate st
 
 ### Prerequisites
 
-- Go programming language (version 1.19 or higher recommended)
+- Modern web browser (Chrome, Firefox, Safari, or Edge)
 - Basic understanding of Rubik's cube notation
 
 ### Installation
@@ -28,21 +30,21 @@ git clone https://github.com/SandeepKalla/CubeSolver.git
 cd CubeSolver
 ```
 
-2. Build the project:
+2. Open the project:
 ```bash
-go build
-```
-
-3. Run the solver:
-```bash
-go run main.go
+# Simply open index.html in your web browser
+# Or serve it using a local server
+python -m http.server 8000
+# Then navigate to http://localhost:8000
 ```
 
 ## Usage
 
+Open `index.html` in your web browser to start using the cube solver.
+
 [Add specific usage instructions based on your implementation]
 
-```go
+```javascript
 // Example usage code would go here
 // depending on how your solver interface works
 ```
@@ -75,4 +77,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-*Developed with Go for efficient Rubik's cube solving*
+*A web-based Rubik's cube solver built with HTML, CSS, and JavaScript*
