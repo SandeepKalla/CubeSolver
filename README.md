@@ -2,6 +2,10 @@
 
 A 3x3 Rubik's Cube solver implementation that provides algorithmic solutions for solving scrambled Rubik's cubes.
 
+## 🚀 Live Demo
+
+**[Try CubeSolver Live](https://voluble-unicorn-988091.netlify.app)**
+
 ## Overview
 
 CubeSolver is designed to analyze a given 3x3 Rubik's cube state and generate step-by-step solutions to solve it efficiently. The project implements cube-solving algorithms to find optimal or near-optimal move sequences.
